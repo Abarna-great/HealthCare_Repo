@@ -110,41 +110,36 @@ SELECT * FROM Appointment;
 -- updation 
 
 -- Update patient's phone number
-UPDATE Patient SET pat_phone = '+91-9000000001' WHERE pat_id = 301;
+UPDATE Patient SET pat_phone = '9000000001' WHERE pat_id = 2;
 
 -- Update doctor department
 UPDATE Doctor SET dept_id = 3 WHERE doc_id = 101;
 
 -- Update admission discharge date
-UPDATE Admission SET discharge_date = '2025-07-06' WHERE admission_id = 401;
+UPDATE Admission SET discharge_date = '2025-07-06' WHERE admission_id = 3;
 
 -- Update appointment status
-UPDATE Appointment SET status = 'Cancelled' WHERE appointment_id = 502;
+UPDATE Appointment SET status = 'Scheduled' WHERE appointment_id =3;
 
 
 UPDATE Appointment
 SET status = 'Cancelled'
-WHERE appointment_id IN (503, 504, 505);
+WHERE appointment_id IN (2, 1);
 
 
 
 -- deletion
 
-DELETE FROM Patient WHERE pat_id = 301;
+DELETE FROM Patient WHERE pat_id = 1;
 
-DELETE FROM Doctor WHERE doc_id = 103;
+DELETE FROM Doctor WHERE doc_id = 3;
 
 DELETE FROM Department WHERE dept_id = 5;
 
-DELETE FROM Appointment WHERE appointment_id = 504;
+DELETE FROM Appointment WHERE appointment_id = 2;
 
-DELETE FROM Staff WHERE staff_id = 202;
+DELETE FROM Staff WHERE staff_id = 3;
 
 
 DELETE FROM Staff
-WHERE staff_id IN (205, 206, 207);
-
-
-
-
-
+WHERE staff_id IN (4, 3);
